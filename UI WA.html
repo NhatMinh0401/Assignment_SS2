@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writing Assistant Tool</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Writing Assistant Tool</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="input-section">
+            <h2>Input Text</h2>
+            <form action="/process" method="POST">
+                <textarea id="input-text" name="input-text" placeholder="Enter your text here"></textarea>
+                <button type="submit">Process</button>
+            </form>
+        </div>
+
+        <div class="output-section">
+            <h2>Output</h2>
+            <div id="output">
+                <!-- Output will be displayed here -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Writing Assistant Tool. All rights reserved.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
